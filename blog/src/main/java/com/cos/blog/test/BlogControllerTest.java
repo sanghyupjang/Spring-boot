@@ -1,10 +1,17 @@
 package com.cos.blog.test;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
 public class BlogControllerTest {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	@GetMapping("/test/hello")
+	public String hello() {
+		return "<h1>hello spring boot</h1>";
+	}
 
 	}
 
-}
+
